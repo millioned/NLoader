@@ -61,6 +61,10 @@ local function loadScriptByPlaceId()
             loadstring(game:HttpGet('https://raw.githubusercontent.com/millioned/Nameless/refs/heads/main/Namelesss'))()
         end,
     }
+
+    if scripts[placeId] then
+        scripts[placeId]()
+    end
 end
 showLoadingAnimation()
 loadScriptByPlaceId()
